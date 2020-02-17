@@ -20,7 +20,12 @@ import retrofit2.Response
 class CountriesFragment : Fragment() {
     val countriesAdapter = CountriesAdapter(object : OnCountryClickListener {
         override fun onCountryClick(country: Country) {
-            view?.let { Snackbar.make(it, country.name.toString(), Snackbar.LENGTH_SHORT).show() }
+            fragmentManager?.let {
+                it.beginTransaction()
+                    .replace(R.id.fragment, CountryFragment.newInstance(country))
+                    .addToBackStack(CountryFragment.javaClass.simpleName)
+                    .commit()
+            }
         }
     })
 
@@ -28,9 +33,7 @@ class CountriesFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_countries, container, false)
-    }
+    ): View = inflater.inflate(R.layout.fragment_countries, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -1,6 +1,7 @@
 package olga.ku.restcountries.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Country(
     @SerializedName("name") val name: String?,
@@ -27,4 +28,4 @@ data class Country(
     @SerializedName("flag") val flag: String?,
     @SerializedName("regionalBlocs") val regionalBlocs: Array<RegionalBloc>?,
     @SerializedName("cioc") val cioc: String?
-)
+) : Serializable
