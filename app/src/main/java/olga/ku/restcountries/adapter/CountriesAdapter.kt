@@ -8,7 +8,8 @@ import kotlinx.android.synthetic.main.layout_country.view.*
 import olga.ku.restcountries.R
 import olga.ku.restcountries.model.Country
 
-class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.CountryHolder>() {
+class CountriesAdapter(val onCountryClickListener: OnCountryClickListener) :
+    RecyclerView.Adapter<CountriesAdapter.CountryHolder>() {
     val items = mutableListOf<Country>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = CountryHolder(
@@ -25,12 +26,21 @@ class CountriesAdapter : RecyclerView.Adapter<CountriesAdapter.CountryHolder>() 
         holder.country = items[position]
     }
 
+    inner class CountryHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        init {
+            itemView.setOnClickListener {
+                country?.let { onCountryClickListener.onCountryClick(it) }
+            }
+        }
 
-    class CountryHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var country: Country? = null
             set(value) {
                 field = value
                 itemView.textViewName.text = value?.name
             }
     }
+}
+
+interface OnCountryClickListener {
+    fun onCountryClick(country: Country)
 }
