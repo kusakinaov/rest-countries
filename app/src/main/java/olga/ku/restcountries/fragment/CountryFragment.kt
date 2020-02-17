@@ -13,8 +13,6 @@ import olga.ku.restcountries.model.Language
 import olga.ku.restcountries.model.RegionalBloc
 
 class CountryFragment : Fragment() {
-    var country: Country? = null
-
     companion object {
         const val COUNTRY = "country"
         fun newInstance(country: Country) = CountryFragment().apply {
@@ -30,39 +28,39 @@ class CountryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.let { it ->
-            country = it.getSerializable(COUNTRY) as Country
-            country?.let { country ->
-                view.textViewName.text = country.name
-                view.textViewDomain.text = country.topLevelDomain?.joinToString(separator = ", ")
-                view.textViewAlpha2Code.text = country.alpha2Code
-                view.textViewAlpha3Code.text = country.alpha3Code
-                view.textViewCallingCodes.text =
-                    country.callingCodes?.joinToString(separator = ", ")
-                view.textViewCapital.text = country.capital
-                view.textViewAltSpellings.text =
-                    country.altSpellings?.joinToString(separator = ", ")
-                view.textViewRegion.text = country.region
-                view.textViewSubRegion.text = country.subregion
-                view.textViewPopulation.text = country.population?.toString()
-                view.textViewLatLon.text = country.latlng?.joinToString(", ") { d -> d.toString() }
-                view.textViewDemonym.text = country.demonym
-                view.textViewArea.text = country.area?.toString()
-                view.textViewGini.text = country.gini?.toString()
-                view.textViewTimezones.text = country.timezones?.joinToString(separator = ", ")
-                view.textViewBorders.text = country.borders?.joinToString(separator = ", ")
-                view.textViewNativeName.text = country.nativeName
-                view.textViewNumericCode.text = country.numericCode
-                view.textViewCurrencies.text =
-                    country.currencies?.joinToString(separator = "\n") { currency -> currency.fullLine() }
-                view.textViewLanguages.text =
-                    country.languages?.joinToString(separator = "\n") { language -> language.fullLine() }
-                //translations
-                view.textViewFlag.text = country.flag
-                view.textViewRegionalBlocs.text =
-                    country.regionalBlocs?.joinToString(separator = "\n") { regionalBlock -> regionalBlock.fullLine() }
-                view.textViewCioc.text = country.cioc
-            }
+        arguments?.apply { setCountry(getSerializable(COUNTRY) as Country) }
+    }
+
+    private fun setCountry(country: Country) {
+        activity?.title = country.name
+        view?.apply {
+            textViewName.text = country.name
+            textViewDomain.text = country.topLevelDomain?.joinToString(separator = ", ")
+            textViewAlpha2Code.text = country.alpha2Code
+            textViewAlpha3Code.text = country.alpha3Code
+            textViewCallingCodes.text = country.callingCodes?.joinToString(separator = ", ")
+            textViewCapital.text = country.capital
+            textViewAltSpellings.text = country.altSpellings?.joinToString(separator = ", ")
+            textViewRegion.text = country.region
+            textViewSubRegion.text = country.subregion
+            textViewPopulation.text = country.population?.toString()
+            textViewLatLon.text = country.latlng?.joinToString(", ") { d -> d.toString() }
+            textViewDemonym.text = country.demonym
+            textViewArea.text = country.area?.toString()
+            textViewGini.text = country.gini?.toString()
+            textViewTimezones.text = country.timezones?.joinToString(separator = ", ")
+            textViewBorders.text = country.borders?.joinToString(separator = ", ")
+            textViewNativeName.text = country.nativeName
+            textViewNumericCode.text = country.numericCode
+            textViewCurrencies.text =
+                country.currencies?.joinToString(separator = "\n") { currency -> currency.fullLine() }
+            textViewLanguages.text =
+                country.languages?.joinToString(separator = "\n") { language -> language.fullLine() }
+            //translations
+            textViewFlag.text = country.flag
+            textViewRegionalBlocs.text =
+                country.regionalBlocs?.joinToString(separator = "\n") { regionalBlock -> regionalBlock.fullLine() }
+            textViewCioc.text = country.cioc
         }
     }
 

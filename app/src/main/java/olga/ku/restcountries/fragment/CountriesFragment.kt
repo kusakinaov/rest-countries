@@ -6,28 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_countries.view.*
+import kotlinx.coroutines.*
 import olga.ku.restcountries.R
-import olga.ku.restcountries.RestCountriesApplication
 import olga.ku.restcountries.adapter.CountriesAdapter
-import olga.ku.restcountries.adapter.OnCountryClickListener
+import olga.ku.restcountries.api.RestCountriesService
 import olga.ku.restcountries.model.Country
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class CountriesFragment : Fragment() {
-    val countriesAdapter = CountriesAdapter(object : OnCountryClickListener {
-        override fun onCountryClick(country: Country) {
-            fragmentManager?.let {
-                it.beginTransaction()
-                    .replace(R.id.fragment, CountryFragment.newInstance(country))
-                    .addToBackStack(CountryFragment.javaClass.simpleName)
-                    .commit()
-            }
-        }
-    })
+    private val countriesAdapter = CountriesAdapter { openCountry(it) }
+
+    init {
+        retainInstance = true
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,28 +28,60 @@ class CountriesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        activity?.title = getString(R.string.ttl_all_countries)
         view.recyclerView.apply {
             layoutManager = LinearLayoutManager(view.context)
             adapter = countriesAdapter
         }
+        view.buttonError.setOnClickListener { loadCountries() }
+        if (countriesAdapter.itemCount > 0) {
+            showContent()
+        } else {
+            loadCountries()
+        }
+    }
 
-        RestCountriesApplication.instance.restCountriesService.getAll().enqueue(object :
-            Callback<Array<Country>> {
-            override fun onFailure(call: Call<Array<Country>>, t: Throwable) {
-                t.message?.let {
-                    Snackbar.make(view, it, Snackbar.LENGTH_SHORT).show()
-                }
-            }
+    private fun loadCountries() = CoroutineScope(Dispatchers.IO).launch {
+        try {
+            withContext(Dispatchers.Main) { showProgress() }
+            val response = RestCountriesService.getAll().execute()
+            withContext(Dispatchers.Main) { setCountries(response.body()) }
+        } catch (e: Exception) {
+            withContext(Dispatchers.Main) { showError(e.message) }
+        }
+    }
 
-            override fun onResponse(
-                call: Call<Array<Country>>,
-                response: Response<Array<Country>>
-            ) {
-                response.body()?.let {
-                    countriesAdapter.items.addAll(it)
-                    countriesAdapter.notifyDataSetChanged()
-                }
-            }
-        })
+    private fun showProgress() = view?.apply {
+        progressBar.visibility = View.VISIBLE
+        recyclerView.visibility = View.GONE
+        layoutError.visibility = View.GONE
+    }
+
+    private fun setCountries(countries: Array<Country>?) = countries?.let {
+        countriesAdapter.items.addAll(it)
+        countriesAdapter.notifyDataSetChanged()
+        showContent()
+    }
+
+    private fun showContent() = view?.apply {
+        progressBar.visibility = View.GONE
+        recyclerView.visibility = View.VISIBLE
+        layoutError.visibility = View.GONE
+    }
+
+
+    private fun showError(error: String?) = view?.apply {
+        textViewError.text = error
+        progressBar.visibility = View.GONE
+        recyclerView.visibility = View.GONE
+        layoutError.visibility = View.VISIBLE
+    }
+
+    private fun openCountry(country: Country) {
+        fragmentManager
+            ?.beginTransaction()
+            ?.replace(R.id.fragment, CountryFragment.newInstance(country))
+            ?.addToBackStack(CountryFragment.javaClass.simpleName)
+            ?.commit()
     }
 }

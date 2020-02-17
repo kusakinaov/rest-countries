@@ -3,8 +3,8 @@ package olga.ku.restcountries.api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RestCountriesService {
-    lateinit var api: RestCountriesApi
+object RestCountriesService {
+    private val api: RestCountriesApi
 
     init {
         val retrofit = Retrofit.Builder()
