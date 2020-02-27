@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.layout_country.view.*
+import kotlinx.android.synthetic.main.item_country.view.*
 import olga.ku.restcountries.R
 import olga.ku.restcountries.model.Country
 
@@ -14,7 +14,7 @@ class CountriesAdapter(val listener: ((Country) -> Unit)) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = CountryHolder(
         LayoutInflater.from(parent.context).inflate(
-            R.layout.layout_country,
+            R.layout.item_country,
             parent,
             false
         )
