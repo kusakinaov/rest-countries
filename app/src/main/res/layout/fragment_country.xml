@@ -8,513 +8,368 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="@dimen/screen_vertical_padding"
-        android:paddingBottom="@dimen/screen_vertical_padding">
+        android:paddingLeft="@dimen/item_horizontal_padding"
+        android:paddingRight="@dimen/item_horizontal_padding"
+        android:paddingBottom="@dimen/item_vertical_padding">
 
-        <LinearLayout
-            android:id="@+id/layoutName"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_name"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_name"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="Title" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutDomain"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="Title" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_top_level_domain"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewDomain"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutAlpha2Code"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderDomain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_top_level_domain"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_alpha_2_code"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewAlpha2Code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutAlpha3Code"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewDomain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_alpha_3_code"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewAlpha3Code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutCallingCodes"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderAlpha2Code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_alpha_2_code"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_calling_codes"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewCallingCodes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutCapital"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewAlpha2Code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_capital"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewCapital"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutAltSpellings"
-            style="@style/Item.Field"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_alpha_3_code"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_alt_spellings"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewAltSpellings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutRegion"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewAlpha3Code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_region"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewRegion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutSubRegion"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderCallingCodes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_calling_codes"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_sub_region"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewSubRegion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutPopulation"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewCallingCodes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_population"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewPopulation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutLatLon"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderCapital"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_capital"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_coordinates"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewLatLon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutDemonym"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewCapital"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_demonym"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewDemonym"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutArea"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderAltSpellings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_alt_spellings"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_area"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewArea"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutGini"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewAltSpellings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_gini"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewGini"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutTimezones"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderRegion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_region"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_timezones"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewTimezones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutBorders"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewRegion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_borders"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewBorders"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutNativeName"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderSubRegion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_sub_region"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_native_name"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewNativeName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutNumericCode"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewSubRegion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_numeric_code"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewNumericCode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutCurrencies"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderPopulation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_population"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_currencies"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewCurrencies"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutLanguages"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewPopulation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_languages"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewLanguages"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutTranslations"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderLatLon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_coordinates"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_translations"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewTranslations"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutFlag"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewLatLon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_flag"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewFlag"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutRegionalBlocs"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewHeaderDemonym"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_demonym"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_regional_blocs"
-                android:textAppearance="@style/TextAppearance.Header" />
-
-            <TextView
-                android:id="@+id/textViewRegionalBlocs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutCioc"
-            style="@style/Item.Field"
+        <TextView
+            android:id="@+id/textViewDemonym"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/header_cioc"
-                android:textAppearance="@style/TextAppearance.Header" />
+        <TextView
+            android:id="@+id/textViewHeaderArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_area"
+            android:textAppearance="@style/TextAppearance.Header" />
 
-            <TextView
-                android:id="@+id/textViewCioc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.Value"
-                tools:text="RU" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/textViewArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderGini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_gini"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewGini"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderTimezones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_timezones"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewTimezones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderBorders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_borders"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewBorders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderNativeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_native_name"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewNativeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderNumericCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_numeric_code"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewNumericCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderCurrencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_currencies"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewCurrencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_languages"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderTranslations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_translations"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewTranslations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_flag"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderRegionalBlocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_regional_blocs"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewRegionalBlocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
+
+        <TextView
+            android:id="@+id/textViewHeaderCioc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_padding"
+            android:text="@string/header_cioc"
+            android:textAppearance="@style/TextAppearance.Header" />
+
+        <TextView
+            android:id="@+id/textViewCioc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Value"
+            tools:text="RU" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
