@@ -17,8 +17,8 @@
             android:id="@+id/textViewError"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginLeft="@dimen/item_horizontal_padding"
+            android:layout_marginRight="@dimen/item_horizontal_padding"
             android:gravity="center"
             android:textColor="?android:textColorTertiary"
             android:textSize="14sp"
@@ -28,7 +28,7 @@
             android:id="@+id/buttonError"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/item_small_vertical_padding"
             android:text="@string/button_retry" />
     </LinearLayout>
 
@@ -46,8 +46,8 @@
         android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:clipToPadding="false"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
+        android:paddingTop="@dimen/screen_vertical_padding"
+        android:paddingBottom="@dimen/screen_vertical_padding"
         android:visibility="gone"
         tools:visibility="visible" />
 </FrameLayout>

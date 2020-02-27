@@ -9,16 +9,16 @@
     </style>
 
     <style name="Item">
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">16dp</item>
-        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingLeft">@dimen/item_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/item_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/item_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/item_vertical_padding</item>
         <item name="android:background">?selectableItemBackground</item>
     </style>
 
     <style name="Item.Field">
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingTop">@dimen/item_small_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/item_small_vertical_padding</item>
         <item name="android:background">@null</item>
     </style>
 
