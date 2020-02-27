@@ -21,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/header_name"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -42,7 +42,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Top-level domain"
+                android:text="@string/header_top_level_domain"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -63,7 +63,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alpha 2 code"
+                android:text="@string/header_alpha_2_code"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -84,7 +84,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alpha 3 code"
+                android:text="@string/header_alpha_3_code"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -105,7 +105,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calling codes"
+                android:text="@string/header_calling_codes"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -126,7 +126,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Capital"
+                android:text="@string/header_capital"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -147,7 +147,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Alt spellings"
+                android:text="@string/header_alt_spellings"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -168,7 +168,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Region"
+                android:text="@string/header_region"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -189,7 +189,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sub region"
+                android:text="@string/header_sub_region"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -210,7 +210,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Population"
+                android:text="@string/header_population"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -231,7 +231,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Coordinates"
+                android:text="@string/header_coordinates"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -252,7 +252,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Demonym"
+                android:text="@string/header_demonym"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -273,7 +273,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Area"
+                android:text="@string/header_area"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -294,7 +294,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gini"
+                android:text="@string/header_gini"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -315,7 +315,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Timezones"
+                android:text="@string/header_timezones"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -336,7 +336,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Borders"
+                android:text="@string/header_borders"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -357,7 +357,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Native name"
+                android:text="@string/header_native_name"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -378,7 +378,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Numeric code"
+                android:text="@string/header_numeric_code"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -399,7 +399,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Currencies"
+                android:text="@string/header_currencies"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -420,7 +420,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Languages"
+                android:text="@string/header_languages"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -442,7 +442,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Translations"
+                android:text="@string/header_translations"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -463,7 +463,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Flag"
+                android:text="@string/header_flag"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -484,7 +484,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Regional blocs"
+                android:text="@string/header_regional_blocs"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView
@@ -505,7 +505,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cioc"
+                android:text="@string/header_cioc"
                 android:textAppearance="@style/TextAppearance.Header" />
 
             <TextView

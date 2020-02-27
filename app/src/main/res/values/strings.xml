@@ -2,4 +2,32 @@
     <string name="app_name">Rest Countries</string>
     <string name="button_retry">Retry</string>
     <string name="ttl_all_countries">All countries</string>
+
+    <string name="pattern_currency">%1$s (%2$s=%3$s)</string>
+    <string name="pattern_language">%1$s %2$s (%3$s, %4$s)</string>
+    <string name="pattern_regional_bloc">%1$s %2$s %3$s %4$s</string>
+    <string name="header_name">Name</string>
+    <string name="header_top_level_domain">Top-level domain</string>
+    <string name="header_alpha_2_code">Alpha 2 code</string>
+    <string name="header_alpha_3_code">Alpha 3 code</string>
+    <string name="header_calling_codes">Calling codes</string>
+    <string name="header_capital">Capital</string>
+    <string name="header_alt_spellings">Alt spellings</string>
+    <string name="header_region">Region</string>
+    <string name="header_sub_region">Sub region</string>
+    <string name="header_population">Population</string>
+    <string name="header_coordinates">Coordinates</string>
+    <string name="header_demonym">Demonym</string>
+    <string name="header_area">Area</string>
+    <string name="header_gini">Gini</string>
+    <string name="header_timezones">Timezones</string>
+    <string name="header_borders">Borders</string>
+    <string name="header_native_name">Native name</string>
+    <string name="header_numeric_code">Numeric code</string>
+    <string name="header_currencies">Currencies</string>
+    <string name="header_languages">Languages</string>
+    <string name="header_translations">Translations</string>
+    <string name="header_flag">Flag</string>
+    <string name="header_regional_blocs">Regional blocs</string>
+    <string name="header_cioc">Cioc</string>
 </resources>

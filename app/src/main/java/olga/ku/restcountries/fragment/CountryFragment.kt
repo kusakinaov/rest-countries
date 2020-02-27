@@ -64,12 +64,16 @@ class CountryFragment : Fragment() {
         }
     }
 
-    private fun Currency.fullLine() = "$name ($code=$symbol)"
+    private fun Currency.fullLine() = getString(R.string.pattern_currency, name, code, symbol)
 
-    private fun Language.fullLine() = "$name $nativeName ($iso639_1, $iso639_2)"
+    private fun Language.fullLine() =
+        getString(R.string.pattern_language, name, nativeName, iso639_1, iso639_2)
 
-    private fun RegionalBloc.fullLine() =
-        "$acronym $name ${otherAcronyms?.joinToString(separator = ", ")} ${otherNames?.joinToString(
-            separator = ", "
-        )}"
+    private fun RegionalBloc.fullLine() = getString(
+        R.string.pattern_regional_bloc,
+        acronym,
+        name,
+        otherAcronyms?.joinToString(separator = ", "),
+        otherNames?.joinToString(separator = ", ")
+    )
 }
