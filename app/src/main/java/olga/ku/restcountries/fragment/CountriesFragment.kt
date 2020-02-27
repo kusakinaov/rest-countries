@@ -44,8 +44,8 @@ class CountriesFragment : Fragment() {
     private fun loadCountries() = CoroutineScope(Dispatchers.IO).launch {
         try {
             withContext(Dispatchers.Main) { showProgress() }
-            val response = RestCountriesService.getAll().execute()
-            withContext(Dispatchers.Main) { setCountries(response.body()) }
+            val response = RestCountriesService.getAll()
+            withContext(Dispatchers.Main) { setCountries(response) }
         } catch (e: Exception) {
             withContext(Dispatchers.Main) { showError(e.message) }
         }

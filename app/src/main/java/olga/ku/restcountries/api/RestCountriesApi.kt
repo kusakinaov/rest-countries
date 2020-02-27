@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface RestCountriesApi {
     @GET("/rest/v2/all")
-    fun getAll(): Call<Array<Country>>
+    suspend fun getAll(): Array<Country>
 }

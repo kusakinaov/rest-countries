@@ -14,5 +14,5 @@ object RestCountriesService {
         api = retrofit.create(RestCountriesApi::class.java)
     }
 
-    fun getAll() = api.getAll()
+    suspend fun getAll() = api.getAll()
 }
